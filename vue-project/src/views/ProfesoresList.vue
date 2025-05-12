@@ -2,13 +2,13 @@
   <v-container>
     <v-card>
       <v-card-title class="d-flex justify-space-between align-center">
-        <span class="text-h5">Profesores</span>
+        <span class="text-h5">Legisladores</span>
         <v-btn
           color="primary"
           prepend-icon="mdi-plus"
           @click="openCreateDialog"
         >
-          Nuevo Profesor
+          Nuevo Legislador
         </v-btn>
       </v-card-title>
 
@@ -273,7 +273,7 @@ const headers = [
     sortable: true 
   },
   { 
-    title: 'Cursos Asignados', 
+    title: 'Comunidades Asignados', 
     key: 'cursos', 
     align: 'center',
     sortable: false

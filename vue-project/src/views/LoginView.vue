@@ -4,7 +4,7 @@
         <v-col cols="12" sm="8" md="6" lg="4">
           <v-card class="elevation-2">
             <v-card-title class="text-center pt-6">
-              <span class="text-h5">Sistema Escolar</span>
+              <span class="text-h5">LegisConnect</span>
             </v-card-title>
   
             <v-card-text class="text-center pt-4">
@@ -17,7 +17,7 @@
                   color="primary"
                   class="mb-4"
                 >
-                  mdi-school
+                mdi-account-tie-woman
                 </v-icon>
               </div>
   
@@ -159,6 +159,7 @@
     }
   }
   
+
   const forgotPassword = () => {
     snackbarColor.value = 'info'
     snackbarText.value = 'Función no disponible en este momento'

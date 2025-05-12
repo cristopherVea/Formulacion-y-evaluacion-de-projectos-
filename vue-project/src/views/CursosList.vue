@@ -2,13 +2,13 @@
   <v-container>
     <v-card>
       <v-card-title class="d-flex justify-space-between align-center">
-        <span class="text-h5">Cursos</span>
+        <span class="text-h5">Comunidades </span>
         <v-btn
           color="primary"
           prepend-icon="mdi-plus"
           @click="openCreateDialog"
         >
-          Nuevo Curso
+          Nueva Comunidad
         </v-btn>
       </v-card-title>
 
@@ -305,13 +305,13 @@ const headers = [
     sortable: true 
   },
   { 
-    title: 'Estudiantes', 
+    title: ' ,', 
     key: 'estudiantes', 
     align: 'center',
     sortable: false
   },
   { 
-    title: 'Profesores', 
+    title: '.', 
     key: 'profesores', 
     align: 'center',
     sortable: false
