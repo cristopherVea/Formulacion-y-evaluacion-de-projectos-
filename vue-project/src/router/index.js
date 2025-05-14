@@ -4,6 +4,7 @@ import EstudiantesList from '../views/EstudiantesList.vue'
 import ProfesoresList from '../views/ProfesoresList.vue'
 import CursosList from '../views/CursosList.vue'
 import PostsList from '../views/PostsList.vue' // Importa la nueva vista de posts
+//import HomeView from '../views/HomeView.vue' // Importa HomeView
 
 const routes = [
   {

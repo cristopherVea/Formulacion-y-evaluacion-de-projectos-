@@ -1,133 +1,92 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width="600"
-    style="background-color: #36393f; color: white;"
-  >
-    <v-list-item>
-      <v-list-item-avatar size="24" style="float: left;">
-        <img
-          :src="avatar"
-          alt="Avatar"
-          style="width: 40%; height: 40%; object-fit: cover; display: block;"
-        />
-      </v-list-item-avatar>
-      <div style="float: left; margin-left: -100px;">
-        <v-list-item-title class="font-weight-bold" style="font-size: 14px;">
-          {{ username }}
-        </v-list-item-title>
-        <v-list-item-subtitle style="font-size: 10px;">
-          {{ timestamp }}
-        </v-list-item-subtitle>
+  <div class="welcome-container">
+    <div class="welcome-card">
+      <img src="C:\Users\veacr\OneDrive\Documentos\Paginas web\proyectobackendfrontent\vue-project\src\assets\20250512_1735_Unión Ciudadanos y Legisladores_simple_compose_01jv3h04hveava1x5sxc1wg337 (1).png" alt="Personas dándose la mano" class="welcome-image">
+      <h1>¡Bienvenidos a LegisConnect!</h1>
+      <p>
+        El espíritu de nuestra plataforma: conectar a ciudadanos y legisladores para construir una democracia más fuerte y participativa.
+      </p>
+      <p>
+        LegisConnect está diseñada para empoderarte y dar voz a tus opiniones en el proceso legislativo. Nuestro objetivo es fomentar la colaboración, aumentar la transparencia y asegurar que tus inquietudes estén en el centro de la toma de decisiones.
+      </p>
+      <div class="features">
+        <p>Aquí puedes:</p>
+        <ul>
+          <li>Compartir tus ideas y proponer nuevas leyes.</li>
+          <li>Participar en debates y discusiones significativas.</li>
+          <li>Seguir el progreso de las iniciativas y mantenerte informado sobre las acciones de tus representantes.</li>
+        </ul>
       </div>
-      <v-spacer></v-spacer>
-    </v-list-item>
-
-    <div style="clear: both;"></div>
-
-    <v-divider style="border-color: #424549;"></v-divider>
-
-    <v-card-text class="pt-4">
-      <p class="mb-4">{{ postText }}</p>
-      <img :src="postImage" class="post-image rounded" />
-    </v-card-text>
-
-    <v-divider style="border-color: #424549;"></v-divider>
-
-    <v-card-actions class="justify-space-around">
-      <v-row no-gutters>
-        <v-col cols="4" class="text-center">
-          <v-btn
-            text
-            :color="isLiked ? 'primary' : null"
-            style="color: white;"
-            @click="toggleLike"
-          >
-            Me gusta
-          </v-btn>
-        </v-col>
-        <v-col cols="4" class="text-center">
-          <v-btn text style="color: white;" @click="toggleComment">
-            Comentar
-          </v-btn>
-        </v-col>
-        <v-col cols="4" class="text-center">
-          <v-btn text style="color: white;">Compartir</v-btn>
-        </v-col>
-      </v-row>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <v-card v-if="isCommentOpen" class="mt-4" style="background-color: #424549;">
-        <v-card-text>
-          <v-textarea
-            label="Escribe un comentario..."
-            outlined
-            style="background-color: white; color: black;"
-          ></v-textarea>
-          <v-btn color="primary" class="mt-2">Publicar</v-btn>
-        </v-card-text>
-      </v-card>
-    </v-expand-transition>
-
-    <v-divider style="border-color: #424549;"></v-divider>
-
-    <v-card-text class="text-center">
-      <span class="mr-2">{{ likes }}</span>
-      <span class="mr-2">{{ comments }}</span>
-      <span>{{ shares }}</span>
-    </v-card-text>
-
-    <div v-for="(newPost, index) in newPosts" :key="index" class="mt-4">
-      <v-card style="background-color: #36393f; color: white;">
-        <v-card-text>
-          <p>{{ newPost.content }}</p>
-          <img v-for="(image, imageIndex) in newPost.images" :key="imageIndex" :src="URL.createObjectURL(image)" style="max-width: 100%; height: auto;" />
-        </v-card-text>
-      </v-card>
+      <p>
+        Así como se ve en este momento de conexión, LegisConnect está comprometida con acortar la distancia entre la comunidad y quienes la sirven. Te invitamos a unirte a nosotros y convertirte en un participante activo en la construcción del futuro de nuestra sociedad.
+      </p>
+      <p>
+        Trabajemos juntos para construir un gobierno más conectado y receptivo. ¡Tu participación hace la diferencia!
+      </p>
     </div>
-  </v-card>
+  </div>
 </template>
 
 <script>
-import bacheImage from "@/assets/bache.jpeg";
-import otraImagen from "@/assets/usuario.jpg";
-
 export default {
+  name: 'WelcomeScreen',
   data() {
-    return {
-      avatar: otraImagen,
-      username: "Christopher Vea",
-      timestamp: "27 de marzo de 2018",
-      postText:
-        "(Propuesta) La presente ley tiene como finalidad garantizar la seguridad vial mediante el mantenimiento adecuado de las vías públicas, la prevención de accidentes ocasionados por el mal estado de las calles y la sanción de omisiones en el cumplimiento de estas disposiciones.",
-      postImage: bacheImage,
-      likes: "19 mil",
-      comments: "1.3 mil comentarios",
-      shares: "3.3 mil veces compartido",
-      isLiked: false,
-      isCommentOpen: false,
-      newPosts: [], // Array para almacenar las nuevas publicaciones
-    };
-  },
-  methods: {
-    toggleLike() {
-      this.isLiked = !this.isLiked;
-    },
-
-    toggleComment() {
-      this.isCommentOpen = !this.isCommentOpen;
-    },
-    addNewPost(post) {
-      this.newPosts.push(post);
-    },
-  },
+    return {};
+  }
 };
 </script>
 
 <style scoped>
-.post-image {
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+}
+
+.welcome-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* Make the card wider  */
+  width: 90%;          /* Increased width  */
+  max-width: 900px;   /* Increased max-width  */
+  text-align: center;
+}
+
+.welcome-image {
   width: 100%;
-  height: auto;
+  max-height: 350px;  /* Slightly increased max-height for aspect ratio  */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.features {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.features li {
+  margin-bottom: 5px;
 }
 </style>
